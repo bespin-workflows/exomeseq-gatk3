@@ -9,8 +9,8 @@ requirements:
   SubworkflowFeatureRequirement: {}
   SchemaDefRequirement:
     types:
-    - $import: ../types/ExomeseqStudyType.yml
-    - $import: ../types/FASTQReadPairType.yml
+    - $import: types/ExomeseqStudyType.yml
+    - $import: types/FASTQReadPairType.yml
 inputs:
   study_type:
     type: ../types/ExomeseqStudyType.yml#ExomeseqStudyType
@@ -21,7 +21,7 @@ inputs:
   interval_padding: int?
   # Named read pairs in FASTQ format
   read_pairs:
-      type: ../types/FASTQReadPairType.yml#FASTQReadPairType[]
+      type: types/FASTQReadPairType.yml#FASTQReadPairType[]
   # reference genome, fasta
   reference_genome:
     type: File
@@ -110,7 +110,7 @@ steps:
       - target_interval_list
       - bait_interval_list
   preprocessing:
-    run: ../subworkflows/exomeseq-01-preprocessing.cwl
+    run: subworkflows/exomeseq-01-preprocessing.cwl
     scatter: read_pair
     in:
       intervals: target_intervals
@@ -134,7 +134,7 @@ steps:
       - raw_variants
       - hs_metrics
   variant_discovery:
-    run: ../subworkflows/exomeseq-02-variantdiscovery.cwl
+    run: subworkflows/exomeseq-02-variantdiscovery.cwl
     in:
       study_type: study_type
       name: library
@@ -160,7 +160,7 @@ steps:
       - variant_recalibration_snps_indels_rscript
       - variant_recalibration_snps_indels_vcf
   organize_directories:
-    run: ../subworkflows/exomeseq-03-organizedirectories.cwl
+    run: subworkflows/exomeseq-03-organizedirectories.cwl
     in:
       fastqc_reports: preprocessing/fastqc_reports
       trim_reports: preprocessing/trim_reports

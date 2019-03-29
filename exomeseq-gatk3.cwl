@@ -7,7 +7,7 @@ doc: |
 requirements:
   - class: ScatterFeatureRequirement
   - class: SubworkflowFeatureRequirement
-  - $import: ../types/bespin-types.yml
+  - $import: types/bespin-types.yml
 inputs:
   # Intervals should come from capture kit (target intervals) bed format
   intervals: File[]?
@@ -16,7 +16,7 @@ inputs:
   interval_padding: int?
   # Named read pairs in FASTQ format
   read_pairs:
-      type: ../types/bespin-types.yml#NamedFASTQFilePairType[]
+      type: types/bespin-types.yml#NamedFASTQFilePairType[]
   # reference genome, fasta
   reference_genome:
     type: File
@@ -96,7 +96,7 @@ outputs:
     doc: "The output filtered and recalibrated VCF file in which each variant is annotated with its VQSLOD value"
 steps:
   preprocessing:
-    run: ../subworkflows/exomeseq-01-preprocessing.cwl
+    run: subworkflows/exomeseq-01-preprocessing.cwl
     scatter: read_pair
     in:
       intervals: intervals
@@ -120,7 +120,7 @@ steps:
       - haplotypes_bam
       - hs_metrics
   variant_discovery:
-    run: ../subworkflows/exomeseq-02-variantdiscovery.cwl
+    run: subworkflows/exomeseq-02-variantdiscovery.cwl
     in:
       name: library
       intervals: intervals
@@ -145,7 +145,7 @@ steps:
       - variant_recalibration_snps_indels_rscript
       - variant_recalibration_snps_indels_vcf
   organize_directories:
-    run: ../subworkflows/exomeseq-03-organizedirectories.cwl
+    run: subworkflows/exomeseq-03-organizedirectories.cwl
     in:
       fastqc_reports: preprocessing/fastqc_reports
       trim_reports: preprocessing/trim_reports

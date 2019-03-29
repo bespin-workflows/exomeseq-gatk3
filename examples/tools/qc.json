@@ -1,4 +1,0 @@
-{
-  "input_fastq_file":
-    {"class":"File", "basename":"Control1_R1.fastq", "contents": "@SEQ_ID\nGATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT\n+\n!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65"}
-}

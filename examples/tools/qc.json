@@ -1,4 +1,0 @@
-{
-  "input_fastq_file":
-    {"class":"File", "path":"/home/ubuntu/GCBA_RO/raw_data/fastq_files/Control1_R1.fastq"}
-}

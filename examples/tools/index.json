@@ -1,7 +1,0 @@
-{
-    "input": {
-        "path": "/home/ubuntu/bespin-cwl/data/Bespin_RNAseq_Aligned.sortedByCoord.out.bam",
-        "class": "File"
-    },
-    "bai": true
-}

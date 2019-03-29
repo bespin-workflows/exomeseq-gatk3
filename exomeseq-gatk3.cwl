@@ -1,9 +1,8 @@
 #!/usr/bin/env cwl-runner
 cwlVersion: v1.0
 class: Workflow
-label: Whole Exome Sequencing
-doc: |
-  Whole Exome Sequence analysis using GATK best practices - Germline SNP & Indel Discovery
+label: exomeseq-gatk3/v1.0.0
+doc: Whole Exome Sequence analysis using GATK3 - v1.0.0
 requirements:
   - class: ScatterFeatureRequirement
   - class: SubworkflowFeatureRequirement

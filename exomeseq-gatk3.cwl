@@ -7,7 +7,7 @@ doc: |
 requirements:
   - class: ScatterFeatureRequirement
   - class: SubworkflowFeatureRequirement
-  - $import: ../types/bespin-types.yml
+  - $import: types/bespin-types.yml
 inputs:
   study_type:
     type: ../types/bespin-types.yml#ExomeseqStudyType
@@ -18,7 +18,7 @@ inputs:
   interval_padding: int?
   # Named read pairs in FASTQ format
   read_pairs:
-      type: ../types/bespin-types.yml#NamedFASTQFilePairType[]
+      type: types/bespin-types.yml#NamedFASTQFilePairType[]
   # reference genome, fasta
   reference_genome:
     type: File
@@ -107,7 +107,7 @@ steps:
       - target_interval_list
       - bait_interval_list
   preprocessing:
-    run: ../subworkflows/exomeseq-01-preprocessing.cwl
+    run: subworkflows/exomeseq-01-preprocessing.cwl
     scatter: read_pair
     in:
       intervals: intervals
@@ -133,7 +133,7 @@ steps:
       - haplotypes_bam
       - hs_metrics
   variant_discovery:
-    run: ../subworkflows/exomeseq-02-variantdiscovery.cwl
+    run: subworkflows/exomeseq-02-variantdiscovery.cwl
     in:
       study_type: study_type
       name: library
@@ -159,7 +159,7 @@ steps:
       - variant_recalibration_snps_indels_rscript
       - variant_recalibration_snps_indels_vcf
   organize_directories:
-    run: ../subworkflows/exomeseq-03-organizedirectories.cwl
+    run: subworkflows/exomeseq-03-organizedirectories.cwl
     in:
       fastqc_reports: preprocessing/fastqc_reports
       trim_reports: preprocessing/trim_reports

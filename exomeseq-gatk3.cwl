@@ -10,7 +10,7 @@ requirements:
   - $import: types/bespin-types.yml
 inputs:
   study_type:
-    type: ../types/bespin-types.yml#ExomeseqStudyType
+    type: types/bespin-types.yml#ExomeseqStudyType
   # Intervals should come from capture kit (target intervals) bed format
   intervals: File[]?
   # Intervals should come from capture kit (bait intervals) bed format
@@ -98,7 +98,7 @@ outputs:
     doc: "The output filtered and recalibrated VCF file in which each variant is annotated with its VQSLOD value"
 steps:
   prepare_reference_data:
-    run: ../subworkflows/exomeseq-00-prepare-reference-data.cwl
+    run: subworkflows/exomeseq-00-prepare-reference-data.cwl
     in:
       intervals: intervals
       primary_intervals: primary_intervals

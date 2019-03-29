@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.1] - 2019-03-29
+
+### Changed
+
+- exomeseq-gatk3 workflow migrated from exomeseq.cwl in [bespin-cwl v0.9.2.1](https://github.com/Duke-GCB/bespin-cwl/releases/tag/v0.9.2.1)
+- Raised memory in sort and mapping steps to try to avoid out-of-memory errors on VM
+
 ## [3.0.0] - 2019-03-29
 
 ### Changed
@@ -34,6 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release of exomeseq-gatk3 workflow, migrated from exomeseq.cwl in [bespin-cwl v0.9.0](https://github.com/Duke-GCB/bespin-cwl/releases/tag/v0.9.0)
 
 [Unreleased]: https://github.com/bespin-workflows/exomeseq-gatk3/compare/v3.0.0...release-3.0
+[3.0.1]: https://github.com/bespin-workflows/exomeseq-gatk3/compare/v3.0.1...v3.0.0
 [3.0.0]: https://github.com/bespin-workflows/exomeseq-gatk3/compare/v3.0.0...v2.0.0
 [2.0.0]: https://github.com/bespin-workflows/exomeseq-gatk3/compare/v2.0.0...v1.0.0
 [1.0.0]: https://github.com/bespin-workflows/exomeseq-gatk3/releases/tag/v1.0.0

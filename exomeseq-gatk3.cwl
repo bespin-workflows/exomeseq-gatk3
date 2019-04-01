@@ -1,8 +1,8 @@
 #!/usr/bin/env cwl-runner
 cwlVersion: v1.0
 class: Workflow
-label: exomeseq-gatk3/v3.0.2
-doc: Whole Exome Sequence analysis using GATK3 - v3.0.2
+label: exomeseq-gatk3/v4.0.0
+doc: Whole Exome Sequence analysis using GATK3 - v4.0.0
 requirements:
   ScatterFeatureRequirement: {}
   SubworkflowFeatureRequirement: {}

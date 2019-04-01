@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.1.1] - 2019-04-01
+
+### Changed
+
+- exomeseq-gatk3 workflow migrated from exomeseq.cwl in [bespin-cwl v0.9.5](https://github.com/Duke-GCB/bespin-cwl/releases/tag/v0.9.5)
+- Reorganized bespin-types into individual files
+- Restructured requirements to support importing one type per file
+- Optimize concat-gz-files tool to skip decompression/recompression if only one file
+
 ## [4.1.0] - 2019-04-01
 
 ### Added
@@ -72,7 +81,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release of exomeseq-gatk3 workflow, migrated from exomeseq.cwl in [bespin-cwl v0.9.0](https://github.com/Duke-GCB/bespin-cwl/releases/tag/v0.9.0)
 
-[Unreleased]: https://github.com/bespin-workflows/exomeseq-gatk3/compare/v4.1.0...release-4.1
+[Unreleased]: https://github.com/bespin-workflows/exomeseq-gatk3/compare/v4.1.1...release-4.1
+[4.1.1]: https://github.com/bespin-workflows/exomeseq-gatk3/compare/v4.1.1...v4.1.0
 [4.1.0]: https://github.com/bespin-workflows/exomeseq-gatk3/compare/v4.1.0...v4.0.0
 [4.0.0]: https://github.com/bespin-workflows/exomeseq-gatk3/compare/v4.0.0...v3.0.2
 [3.0.2]: https://github.com/bespin-workflows/exomeseq-gatk3/compare/v3.0.2...v3.0.1

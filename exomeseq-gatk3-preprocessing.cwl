@@ -1,12 +1,14 @@
 #!/usr/bin/env cwl-runner
 cwlVersion: v1.0
 class: Workflow
-label: exomeseq-gatk3-preprocessing/v4.1.0
-doc: Whole Exome Sequence preprocessing using GATK3 - v4.1.0
+label: exomeseq-gatk3-preprocessing/v4.1.1
+doc: Whole Exome Sequence preprocessing using GATK3 - v4.1.1
 requirements:
-  - class: ScatterFeatureRequirement
-  - class: SubworkflowFeatureRequirement
-  - $import: types/bespin-types.yml
+  ScatterFeatureRequirement: {}
+  SubworkflowFeatureRequirement: {}
+  SchemaDefRequirement:
+    types:
+      - $import: types/FASTQReadPairType.yml
 inputs:
   # Intervals should come from capture kit (target intervals) bed format
   target_intervals: File[]?
@@ -15,7 +17,7 @@ inputs:
   interval_padding: int?
   # Named read pair in FASTQ format
   read_pair:
-      type: types/bespin-types.yml#FASTQReadPairType
+    type: types/FASTQReadPairType.yml#FASTQReadPairType
   # reference genome, fasta
   reference_genome:
     type: File

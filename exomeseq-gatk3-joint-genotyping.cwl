@@ -92,7 +92,7 @@ outputs:
     doc: "BAM files containing recalibrated reads"
   joint_raw_variants:
     type: File
-    outputSource: variant_discovery/joint_raw_variants
+    outputSource: joint_genotyping/joint_raw_variants
     doc: "GVCF file from joint genotyping calling"
 steps:
   prepare_reference_data:
@@ -128,8 +128,8 @@ steps:
       - recalibrated_reads
       - raw_variants
       - hs_metrics
-  variant_discovery:
-    run: subworkflows/exomeseq-02-variantdiscovery-joint-genotyping.cwl
+  joint_genotyping:
+    run: subworkflows/exomeseq-02-joint-genotyping.cwl
     in:
       study_type: study_type
       name: library

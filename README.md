@@ -5,4 +5,6 @@ Whole Exome Sequencing CWL workflows using GATK 3, based on https://software.bro
 
 ## Workflows
 
+- exomeseq-gatk3-joint-genotyping.cwl
+- exomeseq-gatk3-preprocessing.cwl
 - exomeseq-gatk3.cwl

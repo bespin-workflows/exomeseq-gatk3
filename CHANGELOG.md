@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+ - exomeseq-gatk3-joint-genotyping workflow based on exomeseq-gatk3.cwl but stops at the joint_genotyping step.
+
 ## [4.1.1] - 2019-04-01
 
 ### Changed

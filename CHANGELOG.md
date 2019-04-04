@@ -7,9 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.2.0] - 2019-04-04
+
 ### Added
 
- - exomeseq-gatk3-joint-genotyping workflow based on exomeseq-gatk3.cwl but stops at the joint_genotyping step.
+- exomeseq-gatk3-joint-genotyping workflow based on exomeseq-gatk3.cwl but stops at the joint_genotyping step.
 
 ## [4.1.1] - 2019-04-01
 
@@ -85,7 +87,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release of exomeseq-gatk3 workflow, migrated from exomeseq.cwl in [bespin-cwl v0.9.0](https://github.com/Duke-GCB/bespin-cwl/releases/tag/v0.9.0)
 
-[Unreleased]: https://github.com/bespin-workflows/exomeseq-gatk3/compare/v4.1.1...release-4.1
+[Unreleased]: https://github.com/bespin-workflows/exomeseq-gatk3/compare/v4.2.0...release-4.2
+[4.2.0]: https://github.com/bespin-workflows/exomeseq-gatk3/compare/v4.2.0...v4.1.1
 [4.1.1]: https://github.com/bespin-workflows/exomeseq-gatk3/compare/v4.1.1...v4.1.0
 [4.1.0]: https://github.com/bespin-workflows/exomeseq-gatk3/compare/v4.1.0...v4.0.0
 [4.0.0]: https://github.com/bespin-workflows/exomeseq-gatk3/compare/v4.0.0...v3.0.2

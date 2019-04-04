@@ -2,7 +2,7 @@
 cwlVersion: v1.0
 class: Workflow
 label: exomeseq-gatk3-joint-genotyping/v4.1.1
-doc: Whole Exome Sequence analysis that stops at joing genotyping using GATK3 - v4.1.1
+doc: Whole Exome Sequence analysis that stops at joint genotyping using GATK3 - v4.1.1
 requirements:
   ScatterFeatureRequirement: {}
   SubworkflowFeatureRequirement: {}

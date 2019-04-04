@@ -1,8 +1,8 @@
 #!/usr/bin/env cwl-runner
 cwlVersion: v1.0
 class: Workflow
-label: exomeseq-gatk3-joint-genotyping/v4.1.1
-doc: Whole Exome Sequence analysis that stops at joint genotyping using GATK3 - v4.1.1
+label: exomeseq-gatk3-joint-genotyping/v4.2.0
+doc: Whole Exome Sequence analysis that stops at joint genotyping using GATK3 - v4.2.0
 requirements:
   ScatterFeatureRequirement: {}
   SubworkflowFeatureRequirement: {}

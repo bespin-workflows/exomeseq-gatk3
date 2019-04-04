@@ -2,7 +2,7 @@
 cwlVersion: v1.0
 class: Workflow
 label: exomeseq-gatk3/v4.1.1
-doc: Whole Exome Sequence analysis using GATK3 - v4.1.1
+doc: Whole Exome Sequence analysis using GATK3 - v4.2.0
 requirements:
   ScatterFeatureRequirement: {}
   SubworkflowFeatureRequirement: {}

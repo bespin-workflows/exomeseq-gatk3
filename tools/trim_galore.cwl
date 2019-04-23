@@ -43,10 +43,6 @@ outputs:
       glob: "*_trimming_report.txt"
 
 baseCommand: trim_galore
-arguments:
-  - valueFrom: $(runtime.outdir)
-    prefix: "-o"
-    position: 2
 
 $namespaces:
   s: https://schema.org/

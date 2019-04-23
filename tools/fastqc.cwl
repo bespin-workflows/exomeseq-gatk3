@@ -12,13 +12,22 @@ hints:
         s:citation: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 
 requirements:
+  # Place input file into output directory, because fastqc
+  # will by default write to the same directory as the input.
+  # While fastqc does have a -o option for specifying the
+  # output directory, it causes the command-line to change
+  # from one run to the next, and therefore cannot be cached.
+  - class: InitialWorkDirRequirement
+    listing:
+      - $(inputs.input_fastq_file)
   - class: InlineJavascriptRequirement
-
 inputs:
   input_fastq_file:
     type: File
     inputBinding:
       position: 4
+      valueFrom: $(self.basename)
+
   noextract:
     type: boolean
     default: true
@@ -39,7 +48,6 @@ inputs:
       position: 5
       prefix: "--threads"
 
-
 outputs:
   output_qc_report:
     type: File
@@ -49,10 +57,7 @@ outputs:
 baseCommand: fastqc
 arguments:
   - valueFrom: $('/tmp')
-    prefix: "--dir"
-    position: 5
-  - valueFrom: $(runtime.outdir)
-    prefix: "-o"
+    prefix: "--dir" # Temp directory to use when writing report images
     position: 5
 
 $namespaces:

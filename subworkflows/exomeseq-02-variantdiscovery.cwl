@@ -156,7 +156,7 @@ steps:
     in:
       study_type: study_type
       base_annotations:
-        default: ["QD","FS","MQ","MQRankSum","ReadPosRankSum"]
+        default: ["QD","FS","SOR","MQRankSum","ReadPosRankSum"]
     out:
       - annotations
   variant_recalibration_indels:

@@ -86,7 +86,7 @@ inputs: # position 0, for java args, 1 for the jar, 2 for the tool itself
     - .idx
     inputBinding:
       position: 2
-      prefix: -resource:omni,known=false,training=true,truth=false,prior=12.0
+      prefix: -resource:omni,known=false,training=true,truth=true,prior=12.0
     doc: omni reference data
 
   resource_1kg:

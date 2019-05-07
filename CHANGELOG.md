@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Updates parameters used by VariantRecalibrator to help with `No data found` errors.
 - Tweaked fastqc and trim\_galore tools to make them cache-able
 
 ## [4.2.0] - 2019-04-04
